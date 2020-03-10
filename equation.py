@@ -8,7 +8,7 @@ import math
 
 
 # function to get the number from the input, q to quit,
-def get_Input():
+def get_input():
     user_data = input("please enter parameters as a real number, or 'q' to quit")
     if user_data == 'q':
         return exit()
@@ -17,16 +17,16 @@ def get_Input():
         return user_number
     except ValueError:
         print("I need a number to continue")
-        return get_Input()
+        return get_input()
 
 
-a = get_Input()
+a = get_input()
 print(f"you have a equal: {a}")
 # input b
-b = get_Input()
+b = get_input()
 print(f"you have b equal: {b}")
 # input c
-c = get_Input()
+c = get_input()
 print(f"you have c equal: {c}")
 # calculate delta:
 delta = b ** - 4 * a * c
