@@ -4,18 +4,38 @@
 # if delta = 0
 # if delta > 0
 # input a
-a = finput("please enter a:\n")
+import math
+
+
+# function to get the number from the input, q to quit,
+def get_Input():
+    user_data = input("please enter parameters as a real number, or 'q' to quit")
+    if user_data == 'q':
+        return exit()
+    try:
+        user_number = float(user_data)
+        return user_number
+    except ValueError:
+        print("I need a number to continue")
+        return get_Input()
+
+
+a = get_Input()
 print(f"you have a equal: {a}")
 # input b
-b = input("please enter b:\n")
+b = get_Input()
 print(f"you have b equal: {b}")
 # input c
-c = input("please enter c:\n")
-print(f"you have b equal: {c}")
+c = get_Input()
+print(f"you have c equal: {c}")
 # calculate delta:
 delta = b ** - 4 * a * c
 
 # if delta < 0
-if (delta < 0)
+if delta < 0:
     print("No solutions\n")
-elif
+elif delta == 0:
+    print(f"equation has solution: {-b / 2 * a}")
+else:
+    print(f"equation has the first solution is: {(-b + math.sqrt(delta))} \n")
+    print(f"equation has the first solution is: {(-b - math.sqrt(delta))} \n")
