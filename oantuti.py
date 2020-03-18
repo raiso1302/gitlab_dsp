@@ -38,9 +38,11 @@ def get_input():
 #start the game
 stop = False
 while stop == False:
+    print("Let's have a new game:\n")
     #computer get the random number
     comp = randint(1,3)
     #get the input
+    print("đấm = 1, lá = 2, kéo = 3, please have a choice \n")
     user_choice = get_input()
     if user_choice == 'q':
         stop = True
